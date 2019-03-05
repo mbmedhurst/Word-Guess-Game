@@ -81,6 +81,8 @@ document.onkeyup = e => {
 }
 
 // The game isnt totally finished:
+// - I haven't been able to limit the keyboard entries to alphabet only - I have the code but for some reason I can't get it to work
+// - The player is able to guess the same letter more than once
 // - I haven't figured out how to stop the game when the word is guessed or player runs out of guesses
 // - I haven't had time to add something upon winning, like a sound effect or image
 
