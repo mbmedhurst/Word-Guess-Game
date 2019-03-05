@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Word Guess Game</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Word Guess Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Kalam|Karla:700" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-  
-    <script src="./assets/javascript/game.js"></script>
+  <header>
+
+    <img src="./assets/images/welcome_sign.jpg">
+
+  </header>
+
+  <main>
+    <div class="answer-container">
+      <div class="grid-item-word" id="word"></div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item" id="display"></div>
+      <div class="grid-item">Press any key to get started</div>
+      <div class="grid-item">Wins</div>
+      <div class="grid-item" id="wins"></div>
+      <div class="grid-item">Current Word</div>
+      <div class="grid-item" id="hiddenWord"></div>
+      <div class="grid-item">Number of guesses remaining</div>
+      <div class="grid-item" id="guessesRemaining"></div>
+      <div class="grid-item">Letters already guessed</div>
+      <div class="grid-item" id="playerGuess"></div>
+    </div>
+
+    <div class="grid-item" id="resetBtn">
+      <button id="resetBtn" onclick="playAgain()">Play Again</button>
+    </div>
+
+  </main>
+
+
+
+  <script src="./assets/javascript/game.js"></script>
 </body>
+
 </html>
