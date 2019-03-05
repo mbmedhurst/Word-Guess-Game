@@ -37,13 +37,21 @@ header {
 
 #display {
     grid-column: 1 / span 1;
-    grid-row: 1 / span 8;
+    grid-row: 1 / span 9;
+}
+
+
+#wins, #hiddenWord, #guessesRemaining {
+    color: white;
 }
 
 #playerGuess {
     grid-column: 2 / span 1;
     grid-row: 9 / span 1;
+    color: white;
 }
+
+
 
 button {
     font-size: 16px;

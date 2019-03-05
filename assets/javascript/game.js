@@ -1,4 +1,4 @@
-let library = ['casino', 'ratpack', 'craps', 'gambling', 'bellagio', 'roulette', 'blackjack', 'hangover', 'sportsbook']
+let library = ['casino', 'ratpack', 'craps', 'roulette', 'blackjack', 'hangover', 'elvis']
 
 let chooseWord = _ => library[Math.floor(Math.random() * library.length)]
 
@@ -6,7 +6,7 @@ let word = chooseWord()
 
 let hiddenWord = []
 
-let guessesRemaining = 10
+let guessesRemaining = 15
 
 let wins = 0
 
@@ -18,7 +18,7 @@ function hideWord() {
 
 function clearAll() {
     wins = 0
-    guessesRemaining = 10
+    guessesRemaining = 15
     playerGuess = []
     word = chooseWord()
     console.log(word)
@@ -30,7 +30,7 @@ function clearAll() {
 }
 
 function playAgain() {
-    guessesRemaining = 10
+    guessesRemaining = 15
     playerGuess = []
     word = chooseWord()
     console.log(word)
@@ -39,6 +39,7 @@ function playAgain() {
     document.querySelector('#guessesRemaining').textContent = guessesRemaining
     document.querySelector('#playerGuess').textContent = playerGuess
     document.querySelector('#word').textContent = ''
+    document.querySelector('#display').innerHTML = ''
 }
 
 clearAll()
@@ -73,10 +74,56 @@ document.onkeyup = e => {
         document.querySelector('#word').innerHTML = word
         wins++ // not working for some reason
         document.querySelector('#wins').innerHTML = wins
+        switch(word) {
+            case 'hangover':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/hangover.jpg\>"
+            break
+            case 'blackjack':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/blackjack.png\>"
+            break
+            case 'craps':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/craps2.jpg\>"
+            break
+            case 'roulette':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/roulette.jpg\>"
+            break
+            case 'casino':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/casino.png\>"
+            break
+            case 'ratpack':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/ratpack.jpg\>"
+            break
+            case 'elvis':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/elvis.jpg\>"
+            break
+        }
     } else {
         guessesRemaining--
         document.querySelector('#guessesRemaining').innerHTML = guessesRemaining
         document.querySelector('#word').innerHTML = word
+        switch(word) {
+            case 'hangover':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/hangover.jpg\>"
+            break
+            case 'blackjack':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/blackjack.png\>"
+            break
+            case 'craps':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/craps2.jpg\>"
+            break
+            case 'roulette':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/roulette.jpg\>"
+            break
+            case 'casino':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/casino.png\>"
+            break
+            case 'ratpack':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/ratpack.jpg\>"
+            break
+            case 'elvis':
+            document.querySelector('#display').innerHTML = "<img src=\./assets/images/elvis.jpg\>"
+            break
+        }
     }
 }
 
@@ -84,7 +131,3 @@ document.onkeyup = e => {
 // - I haven't been able to limit the keyboard entries to alphabet only - I have the code but for some reason I can't get it to work
 // - The player is able to guess the same letter more than once
 // - I haven't figured out how to stop the game when the word is guessed or player runs out of guesses
-// - I haven't had time to add something upon winning, like a sound effect or image
-
-
-
