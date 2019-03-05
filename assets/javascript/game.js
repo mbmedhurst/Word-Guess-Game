@@ -128,6 +128,7 @@ document.onkeyup = e => {
 }
 
 // The game isnt totally finished:
+// - For some reason the play again function doesn't work correctly after I publish it to github. It seems to work fine on my local drive. If you have a problem, just refresh the page.
 // - I haven't been able to limit the keyboard entries to alphabet only - I have the code but for some reason I can't get it to work
 // - The player is able to guess the same letter more than once
 // - I haven't figured out how to stop the game when the word is guessed or player runs out of guesses
